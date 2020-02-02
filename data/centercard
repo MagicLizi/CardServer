@@ -1,0 +1,62 @@
+[
+    {
+        "card_id": "c1",
+        "card_number": 5,
+        "inevitable": 1
+    },
+    {
+        "card_id": "c2",
+        "card_number": 5,
+        "inevitable": 1
+    },
+    {
+        "card_id": "c3",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c4",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c5",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c6",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c7",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c8",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c9",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c10",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c11",
+        "card_number": 2,
+        "inevitable": 0
+    },
+    {
+        "card_id": "c12",
+        "card_number": 2,
+        "inevitable": 0
+    }
+]
