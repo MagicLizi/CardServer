@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package protos;
+
+message TempLoginReq {
+    string name = 1;
+}
+
+message TempLoginRes {
+    string status = 1;
+    string username = 2;
+}
