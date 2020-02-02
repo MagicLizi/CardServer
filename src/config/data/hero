@@ -1,53 +1,5 @@
 [
-    {
-        "hero_id": "英雄ID",
-        "hero_name": "英雄名称",
-        "hero_skin": "英雄皮肤",
-        "hero_describe": "英雄描述",
-        "hero_hp": "英雄生命",
-        "hero_card1": "英雄卡组牌1",
-        "hero_card2": "英雄卡组牌2",
-        "hero_card3": "英雄卡组牌3",
-        "hero_card4": "英雄卡组牌4",
-        "hero_card5": "英雄卡组牌5",
-        "hero_card6": "英雄卡组牌6",
-        "hero_card7": "英雄卡组牌7",
-        "hero_card8": "英雄卡组牌8",
-        "hero_card9": "英雄卡组牌9",
-        "hero_card10": "英雄卡组牌10"
-    },
-    {
-        "hero_id": "h1",
-        "hero_name": "宙斯",
-        "hero_skin": "s1",
-        "hero_describe": "天神",
-        "hero_hp": 80,
-        "hero_card1": "c1",
-        "hero_card2": "c1",
-        "hero_card3": "c2",
-        "hero_card4": "c2",
-        "hero_card5": "c2",
-        "hero_card6": "c2",
-        "hero_card7": "c2",
-        "hero_card8": "c2",
-        "hero_card9": "c2",
-        "hero_card10": "c2"
-    },
-    {
-        "hero_id": "h2",
-        "hero_name": "奥丁",
-        "hero_skin": "s2",
-        "hero_describe": "天神",
-        "hero_hp": 80,
-        "hero_card1": "c1",
-        "hero_card2": "c1",
-        "hero_card3": "c1",
-        "hero_card4": "c1",
-        "hero_card5": "c2",
-        "hero_card6": "c2",
-        "hero_card7": "c2",
-        "hero_card8": "c2",
-        "hero_card9": "c2",
-        "hero_card10": "c2"
-    }
+    {},
+    {},
+    {}
 ]
