@@ -1,0 +1,36 @@
+[
+    {
+        "hero_id": "h1",
+        "hero_name": "宙斯",
+        "hero_skin": "s1",
+        "hero_describe": "天神",
+        "hero_hp": 80,
+        "hero_card1": "c1",
+        "hero_card2": "c1",
+        "hero_card3": "c2",
+        "hero_card4": "c2",
+        "hero_card5": "c2",
+        "hero_card6": "c2",
+        "hero_card7": "c2",
+        "hero_card8": "c2",
+        "hero_card9": "c2",
+        "hero_card10": "c2"
+    },
+    {
+        "hero_id": "h2",
+        "hero_name": "奥丁",
+        "hero_skin": "s2",
+        "hero_describe": "天神",
+        "hero_hp": 80,
+        "hero_card1": "c1",
+        "hero_card2": "c1",
+        "hero_card3": "c1",
+        "hero_card4": "c1",
+        "hero_card5": "c2",
+        "hero_card6": "c2",
+        "hero_card7": "c2",
+        "hero_card8": "c2",
+        "hero_card9": "c2",
+        "hero_card10": "c2"
+    }
+]
