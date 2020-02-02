@@ -9,8 +9,8 @@
         "card_cost": 0,
         "card_combat": 0,
         "card_tenet": 1,
-        "card_skill1": null,
-        "card_skill2": null
+        "card_skill1": "",
+        "card_skill2": ""
     },
     {
         "card_id": "c2",
@@ -22,8 +22,8 @@
         "card_cost": 0,
         "card_combat": 1,
         "card_tenet": 0,
-        "card_skill1": null,
-        "card_skill2": null
+        "card_skill1": "",
+        "card_skill2": ""
     },
     {
         "card_id": "c3",
@@ -35,8 +35,8 @@
         "card_cost": 2,
         "card_combat": 0,
         "card_tenet": 2,
-        "card_skill1": null,
-        "card_skill2": null
+        "card_skill1": "",
+        "card_skill2": ""
     },
     {
         "card_id": "c4",
@@ -48,8 +48,8 @@
         "card_cost": 2,
         "card_combat": 2,
         "card_tenet": 0,
-        "card_skill1": null,
-        "card_skill2": null
+        "card_skill1": "",
+        "card_skill2": ""
     },
     {
         "card_id": "c5",
@@ -62,7 +62,7 @@
         "card_combat": 0,
         "card_tenet": 0,
         "card_skill1": "sk1",
-        "card_skill2": null
+        "card_skill2": ""
     },
     {
         "card_id": "c6",
@@ -75,7 +75,7 @@
         "card_combat": 0,
         "card_tenet": 0,
         "card_skill1": "sk2",
-        "card_skill2": null
+        "card_skill2": ""
     },
     {
         "card_id": "c7",
@@ -88,7 +88,7 @@
         "card_combat": 0,
         "card_tenet": 0,
         "card_skill1": "sk3",
-        "card_skill2": null
+        "card_skill2": ""
     },
     {
         "card_id": "c8",
@@ -101,7 +101,7 @@
         "card_combat": 0,
         "card_tenet": 0,
         "card_skill1": "sk4",
-        "card_skill2": null
+        "card_skill2": ""
     },
     {
         "card_id": "c9",
@@ -114,7 +114,7 @@
         "card_combat": 0,
         "card_tenet": 0,
         "card_skill1": "sk10",
-        "card_skill2": null
+        "card_skill2": ""
     },
     {
         "card_id": "c10",
@@ -127,7 +127,7 @@
         "card_combat": 0,
         "card_tenet": 0,
         "card_skill1": "sk11",
-        "card_skill2": null
+        "card_skill2": ""
     },
     {
         "card_id": "c11",
@@ -140,7 +140,7 @@
         "card_combat": 0,
         "card_tenet": 0,
         "card_skill1": "sk12",
-        "card_skill2": null
+        "card_skill2": ""
     },
     {
         "card_id": "c12",
@@ -153,6 +153,6 @@
         "card_combat": 0,
         "card_tenet": 0,
         "card_skill1": "sk13",
-        "card_skill2": null
+        "card_skill2": ""
     }
 ]
