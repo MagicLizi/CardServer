@@ -1,9 +1,5 @@
 [
     {
-        "card_id": "卡牌ID",
-        "card_number": "卡牌数量"
-    },
-    {
         "card_id": "c1",
         "card_number": 2
     },
