@@ -5,6 +5,7 @@
 package main
 
 import (
+	"./config"
 	"./handler"
 	"encoding/binary"
 	"flag"
@@ -38,18 +39,18 @@ func ws(w http.ResponseWriter, r *http.Request) {
 		}
 
 		if messageType == websocket.BinaryMessage && len(p) > 2 {
-			log.Println("receive buffers:",p)
+			log.Println("receive buffers:", p)
 			msgTypeBuf := p[0:2]
 
 			protoData := p[2:len(p)]
 
 			msgTyp := binary.BigEndian.Uint16(msgTypeBuf)
 
-			log.Println("msgTypeBuf buffers:",msgTypeBuf,msgTyp)
-			log.Println("protoData buffers:",protoData)
+			log.Println("msgTypeBuf buffers:", msgTypeBuf, msgTyp)
+			log.Println("protoData buffers:", protoData)
 
 			curHandler := handler.GetHandlerByMsgId(msgTyp)
-			if curHandler!= nil {
+			if curHandler != nil {
 				curHandler(protoData, msgTypeBuf, conn)
 			}
 		} else {
@@ -61,7 +62,8 @@ func ws(w http.ResponseWriter, r *http.Request) {
 func main() {
 	flag.Parse()
 	log.SetFlags(0)
-	http.HandleFunc("/ws", ws)
+	config.InitDataConfig()
 	handler.InitHandlerConf()
+	http.HandleFunc("/ws", ws)
 	log.Fatal(http.ListenAndServe(*addr, nil))
 }
