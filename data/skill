@@ -7,9 +7,9 @@
         "skill_type": "t1",
         "skill_parameter_a": "discardPile",
         "skill_parameter_b": "1",
-        "skill_parameter_c": null,
-        "skill_parameter_d": null,
-        "skill_parameter_e": null,
-        "skill_parameter_f": null
+        "skill_parameter_c": "",
+        "skill_parameter_d": "",
+        "skill_parameter_e": "",
+        "skill_parameter_f": ""
     }
 ]
