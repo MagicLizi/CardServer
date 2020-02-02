@@ -1,0 +1,15 @@
+[
+    {
+        "skill_id": "skill1",
+        "skill_name": "放逐",
+        "skill_function": "f1",
+        "skill_describe": "放逐弃牌堆中的1张卡牌",
+        "skill_type": "t1",
+        "skill_parameter_a": "discardPile",
+        "skill_parameter_b": "1",
+        "skill_parameter_c": null,
+        "skill_parameter_d": null,
+        "skill_parameter_e": null,
+        "skill_parameter_f": null
+    }
+]
