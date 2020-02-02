@@ -1,28 +1,4 @@
 [
-    {
-        "skill_id": "技能ID",
-        "skill_name": "技能名称",
-        "skill_function": "技能方法",
-        "skill_describe": "技能描述",
-        "skill_type": "技能类型",
-        "skill_parameter_a": "技能参数a",
-        "skill_parameter_b": "技能参数b",
-        "skill_parameter_c": "技能参数c",
-        "skill_parameter_d": "技能参数d",
-        "skill_parameter_e": "技能参数e",
-        "skill_parameter_f": "技能参数f"
-    },
-    {
-        "skill_id": "skill1",
-        "skill_name": "放逐",
-        "skill_function": "f1",
-        "skill_describe": "放逐弃牌堆中的1张卡牌",
-        "skill_type": "t1",
-        "skill_parameter_a": "discardPile",
-        "skill_parameter_b": "1",
-        "skill_parameter_c": null,
-        "skill_parameter_d": null,
-        "skill_parameter_e": null,
-        "skill_parameter_f": null
-    }
+    {},
+    {}
 ]
