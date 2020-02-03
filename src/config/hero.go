@@ -19,3 +19,12 @@ type Hero struct {
 }
 
 var ConfHeros []Hero
+
+func GetHeroById(hId string) *Hero {
+	for _, h := range ConfHeros {
+		if h.Hero_id == hId {
+			return &h
+		}
+	}
+	return nil
+}

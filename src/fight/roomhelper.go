@@ -1,6 +1,10 @@
 package fight
 
-import "time"
+import (
+	"../config"
+	"github.com/gorilla/websocket"
+	"time"
+)
 
 type RoomState int
 
@@ -18,19 +22,40 @@ type Room struct {
 
 var curRooms = make(map[int]Room)
 
-func CreateFightRoom(creator string) int {
+func CreateFightRoom(creator string, heroId string, pve bool, conn *websocket.Conn) int {
 
 	roomId := isInRoom(creator)
 
 	if roomId == 0 {
 		roomId = int(time.Now().Unix())
+		hero := config.GetHeroById(heroId)
 		room := Room{
 			RoomId: roomId,
 			P1: Player{
 				UserName: creator,
+				Hero: FHero{
+					Name:       hero.Hero_name,
+					CurHp:      hero.Hero_hp,
+					StaticData: *hero,
+				},
+				Conn: conn,
+				Type: Common,
 			},
 			RState: Ready,
 		}
+		if pve {
+			comHero := config.GetHeroById("h1") //pve 写死给 h1 暂时
+			room.P2 = Player{
+				UserName: "ComP2",
+				Hero: FHero{
+					Name:       comHero.Hero_name,
+					CurHp:      comHero.Hero_hp,
+					StaticData: *comHero,
+				},
+				Type: PC,
+			}
+		}
+
 		curRooms[roomId] = room
 	}
 
@@ -45,8 +70,4 @@ func isInRoom(creator string) int {
 	}
 
 	return 0
-}
-
-func AddComputer(roomId int64) {
-
 }

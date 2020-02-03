@@ -4,6 +4,8 @@ package protos;
 
 message CreateRoomReq {
     string username = 1;
+    string hero_id = 2;
+    bool pve = 3;
 }
 
 message CreateRoomRes {
@@ -13,6 +15,7 @@ message CreateRoomRes {
 message JoinRoomReq {
     string username = 1;
     uint32 room_id = 2;
+    string hero_id = 3;
 }
 
 message JoinRoomRes {

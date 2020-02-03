@@ -13,7 +13,7 @@ func CreateRoom(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
 	ParseProto(&target, protoBufData)
 
 	ToProtoRes(&protos.CreateRoomRes{
-		RoomId: uint32(fight.CreateFightRoom(target.Username)),
+		RoomId: uint32(fight.CreateFightRoom(target.Username, target.HeroId, target.Pve, conn)),
 	}, msgTypeBuf, conn)
 }
 
