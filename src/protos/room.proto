@@ -21,3 +21,12 @@ message JoinRoomReq {
 message JoinRoomRes {
     uint32 result = 1;
 }
+
+message RoomReadyReq {
+    string username = 1;
+    uint32 room_id = 2;
+}
+
+message RoomReadyRes {
+    uint32 result = 1;
+}

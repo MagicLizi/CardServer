@@ -208,17 +208,105 @@ func (m *JoinRoomRes) GetResult() uint32 {
 	return 0
 }
 
+type RoomReadyReq struct {
+	Username             string   `protobuf:"bytes,1,opt,name=username,proto3" json:"username,omitempty"`
+	RoomId               uint32   `protobuf:"varint,2,opt,name=room_id,json=roomId,proto3" json:"room_id,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *RoomReadyReq) Reset()         { *m = RoomReadyReq{} }
+func (m *RoomReadyReq) String() string { return proto.CompactTextString(m) }
+func (*RoomReadyReq) ProtoMessage()    {}
+func (*RoomReadyReq) Descriptor() ([]byte, []int) {
+	return fileDescriptor_c5fd27dd97284ef4, []int{4}
+}
+
+func (m *RoomReadyReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RoomReadyReq.Unmarshal(m, b)
+}
+func (m *RoomReadyReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RoomReadyReq.Marshal(b, m, deterministic)
+}
+func (m *RoomReadyReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RoomReadyReq.Merge(m, src)
+}
+func (m *RoomReadyReq) XXX_Size() int {
+	return xxx_messageInfo_RoomReadyReq.Size(m)
+}
+func (m *RoomReadyReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_RoomReadyReq.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_RoomReadyReq proto.InternalMessageInfo
+
+func (m *RoomReadyReq) GetUsername() string {
+	if m != nil {
+		return m.Username
+	}
+	return ""
+}
+
+func (m *RoomReadyReq) GetRoomId() uint32 {
+	if m != nil {
+		return m.RoomId
+	}
+	return 0
+}
+
+type RoomReadyRes struct {
+	Result               uint32   `protobuf:"varint,1,opt,name=result,proto3" json:"result,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *RoomReadyRes) Reset()         { *m = RoomReadyRes{} }
+func (m *RoomReadyRes) String() string { return proto.CompactTextString(m) }
+func (*RoomReadyRes) ProtoMessage()    {}
+func (*RoomReadyRes) Descriptor() ([]byte, []int) {
+	return fileDescriptor_c5fd27dd97284ef4, []int{5}
+}
+
+func (m *RoomReadyRes) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_RoomReadyRes.Unmarshal(m, b)
+}
+func (m *RoomReadyRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_RoomReadyRes.Marshal(b, m, deterministic)
+}
+func (m *RoomReadyRes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_RoomReadyRes.Merge(m, src)
+}
+func (m *RoomReadyRes) XXX_Size() int {
+	return xxx_messageInfo_RoomReadyRes.Size(m)
+}
+func (m *RoomReadyRes) XXX_DiscardUnknown() {
+	xxx_messageInfo_RoomReadyRes.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_RoomReadyRes proto.InternalMessageInfo
+
+func (m *RoomReadyRes) GetResult() uint32 {
+	if m != nil {
+		return m.Result
+	}
+	return 0
+}
+
 func init() {
 	proto.RegisterType((*CreateRoomReq)(nil), "protos.CreateRoomReq")
 	proto.RegisterType((*CreateRoomRes)(nil), "protos.CreateRoomRes")
 	proto.RegisterType((*JoinRoomReq)(nil), "protos.JoinRoomReq")
 	proto.RegisterType((*JoinRoomRes)(nil), "protos.JoinRoomRes")
+	proto.RegisterType((*RoomReadyReq)(nil), "protos.RoomReadyReq")
+	proto.RegisterType((*RoomReadyRes)(nil), "protos.RoomReadyRes")
 }
 
 func init() { proto.RegisterFile("room.proto", fileDescriptor_c5fd27dd97284ef4) }
 
 var fileDescriptor_c5fd27dd97284ef4 = []byte{
-	// 179 bytes of a gzipped FileDescriptorProto
+	// 198 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0xe2, 0x2a, 0xca, 0xcf, 0xcf,
 	0xd5, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0x17, 0x62, 0x03, 0x53, 0xc5, 0x4a, 0x61, 0x5c, 0xbc, 0xce,
 	0x45, 0xa9, 0x89, 0x25, 0xa9, 0x41, 0xf9, 0xf9, 0xb9, 0x41, 0xa9, 0x85, 0x42, 0x52, 0x5c, 0x1c,
@@ -229,6 +317,7 @@ var fileDescriptor_c5fd27dd97284ef4 = []byte{
 	0x32, 0x96, 0x37, 0x88, 0x0d, 0xc4, 0xf5, 0x4c, 0x51, 0x8a, 0xe6, 0xe2, 0xf6, 0xca, 0xcf, 0xcc,
 	0x23, 0xd2, 0x7e, 0x98, 0x19, 0x4c, 0xc8, 0x66, 0x20, 0x3b, 0x8c, 0x19, 0xd9, 0x61, 0x4a, 0xaa,
 	0xc8, 0x86, 0x17, 0x0b, 0x89, 0x71, 0xb1, 0x15, 0xa5, 0x16, 0x97, 0xe6, 0x94, 0xc0, 0xdd, 0x00,
-	0xe6, 0x25, 0x41, 0x42, 0xc3, 0x18, 0x10, 0x00, 0x00, 0xff, 0xff, 0x57, 0xaf, 0x61, 0x9d, 0x22,
-	0x01, 0x00, 0x00,
+	0xe6, 0x29, 0x39, 0x73, 0xf1, 0x40, 0x94, 0x24, 0xa6, 0x54, 0x92, 0xeb, 0x08, 0x25, 0x35, 0x14,
+	0x43, 0x70, 0x5a, 0x96, 0x04, 0x09, 0x7a, 0x63, 0x40, 0x00, 0x00, 0x00, 0xff, 0xff, 0x1a, 0xef,
+	0x57, 0x70, 0x8f, 0x01, 0x00, 0x00,
 }

@@ -20,3 +20,13 @@ func CreateRoom(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
 func JoinRoom(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
 	log.Println("join create")
 }
+
+func RoomReady(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
+	log.Println("RoomReady")
+	var target protos.RoomReadyReq
+	ParseProto(&target, protoBufData)
+
+	ToProtoRes(&protos.RoomReadyRes{
+		Result: fight.PlayerRoomReady(target.Username, int(target.RoomId)),
+	}, msgTypeBuf, conn)
+}

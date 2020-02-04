@@ -6,8 +6,10 @@ import (
 	"log"
 )
 
+//todo 所有得配置现在用的都是数组，最快得查询方式应该是用map
 func InitDataConfig() {
 	loadJSONFile("card", &ConfCards)
+	ParseCards()
 	loadJSONFile("centercard", &ConfCenterCards)
 	loadJSONFile("player1card", &P1Cards)
 	loadJSONFile("player2card", &P2Cards)

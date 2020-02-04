@@ -8,10 +8,12 @@ import (
 
 var handlerMap = make(map[uint16]func(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn))
 
+//这个后期需要自动生成
 func InitHandlerConf() {
 	handlerMap[1] = TempLogin
 	handlerMap[2] = CreateRoom
 	handlerMap[3] = JoinRoom
+	handlerMap[4] = RoomReady
 }
 
 func GetHandlerByMsgId(msgId uint16) func(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
