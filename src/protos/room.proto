@@ -8,8 +8,28 @@ message CreateRoomReq {
     bool pve = 3;
 }
 
+message PlayerInfo {
+    string username = 1;
+    string hero_name = 2;
+    uint32 hero_hp = 3;
+    uint32 fv = 4;
+    uint32 belief = 5;
+}
+
 message CreateRoomRes {
     uint32 room_id = 1;
+    bool create = 2;
+    PlayerInfo p1 = 3;
+    PlayerInfo p2 = 4;
+}
+
+message NotifyRefreshCenterShop {
+    repeated string refresh_cards = 1;
+}
+
+message NotifyPlayerRoomInfo {
+    repeated string center_shop_cards = 1;
+    repeated string player_hand_cards = 2;
 }
 
 message JoinRoomReq {

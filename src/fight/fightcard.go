@@ -6,3 +6,10 @@ type FCard struct {
 	Cid        string
 	StaticData config.Card
 }
+
+func InitFCard(fcId string, cardId string) FCard {
+	return FCard{
+		Cid:        fcId,
+		StaticData: config.GetCardById(cardId),
+	}
+}

@@ -30,7 +30,7 @@ func ParseProto(protoStruct proto.Message, protoBufData []byte) {
 func ToProtoRes(protoStruct proto.Message, msgTypeBuf []byte, conn *websocket.Conn) {
 	if data, err := proto.Marshal(protoStruct); err == nil {
 		lastData := append(msgTypeBuf, data...)
-		log.Println("lastData", lastData)
+		//log.Println("lastData", lastData)
 		conn.WriteMessage(websocket.BinaryMessage, lastData)
 	} else {
 		log.Println("to proto error", err)

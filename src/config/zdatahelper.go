@@ -10,7 +10,8 @@ import (
 func InitDataConfig() {
 	loadJSONFile("card", &ConfCards)
 	ParseCards()
-	loadJSONFile("centercard", &ConfCenterCards)
+	loadJSONFile("centercard", &AllCenterCards)
+	ParseCenterCards()
 	loadJSONFile("player1card", &P1Cards)
 	loadJSONFile("player2card", &P2Cards)
 	loadJSONFile("hero", &ConfHeros)

@@ -7,6 +7,7 @@ package main
 import (
 	"./config"
 	"./handler"
+	"./notify"
 	"encoding/binary"
 	"flag"
 	"github.com/gorilla/websocket"
@@ -64,6 +65,8 @@ func main() {
 	log.SetFlags(0)
 	config.InitDataConfig()
 	handler.InitHandlerConf()
+	notify.InitNotifyConf()
 	http.HandleFunc("/ws", ws)
 	log.Fatal(http.ListenAndServe(*addr, nil))
+
 }

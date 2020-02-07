@@ -6,4 +6,18 @@ type CenterCard struct {
 	Inevitable  int
 }
 
-var ConfCenterCards []CenterCard
+var AllCenterCards []CenterCard
+
+var MustCenterCards []CenterCard
+
+var RandomCenterCards []CenterCard
+
+func ParseCenterCards() {
+	for _, v := range AllCenterCards {
+		if v.Inevitable == 1 {
+			MustCenterCards = append(MustCenterCards, v)
+		} else {
+			RandomCenterCards = append(RandomCenterCards, v)
+		}
+	}
+}
