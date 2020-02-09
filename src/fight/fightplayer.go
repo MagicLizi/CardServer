@@ -89,7 +89,7 @@ func (p *Player) Notify(protoStruct proto.Message, messageKey string) {
 	}
 }
 
-func (p *Player) AddHandCard(fCardId string, cardId string) {
+func (p *Player) AddHandCard(fCardId string, cardId int) {
 	p.HandLibrary[fCardId] = InitFCard(fCardId, cardId)
 }
 
@@ -98,11 +98,11 @@ func (p *Player) InitPlayerLibraries(buildCard []config.PlayerCard) {
 	hCards := strings.Split(p.Hero.StaticData.Hero_card, ",")
 	for _, v := range hCards {
 		cardInfo := strings.Split(v, "_")
-		cardId := cardInfo[0]
+		cardId, err := strconv.Atoi(cardInfo[0])
 		count, err := strconv.Atoi(cardInfo[1])
 		if err == nil {
 			for i := 0; i < count; i++ {
-				fCardId := fmt.Sprintf("%s_%d_%d", cardId, i, p.PSide)
+				fCardId := fmt.Sprintf("%d_%d_%d", cardId, i, p.PSide)
 				fCard := InitFCard(fCardId, cardId)
 				p.Library[fCardId] = fCard
 			}
@@ -112,11 +112,13 @@ func (p *Player) InitPlayerLibraries(buildCard []config.PlayerCard) {
 	//初始化构筑卡组
 	for _, v := range buildCard {
 		count := v.Card_number
-		cardId := v.Card_id
-		for i := 0; i < count; i++ {
-			fCardId := fmt.Sprintf("%s_%d_%d", cardId, i, p.PSide)
-			fCard := InitFCard(fCardId, cardId)
-			p.BuildLibrary[fCardId] = fCard
+		cardId, err := strconv.Atoi(v.Card_id)
+		if err != nil {
+			for i := 0; i < count; i++ {
+				fCardId := fmt.Sprintf("%d_%d_%d", cardId, i, p.PSide)
+				fCard := InitFCard(fCardId, cardId)
+				p.BuildLibrary[fCardId] = fCard
+			}
 		}
 	}
 	log.Println("InitPlayerLibraries success!")

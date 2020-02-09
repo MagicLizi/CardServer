@@ -1,9 +1,9 @@
 package config
 
 type Hero struct {
-	Hero_id       string
+	Hero_id       int
 	Hero_name     string
-	Hero_skin     string
+	Hero_skin     int
 	Hero_describe string
 	Hero_hp       int
 	Hero_card     string
@@ -11,7 +11,7 @@ type Hero struct {
 
 var ConfHeros []Hero
 
-func GetHeroById(hId string) *Hero {
+func GetHeroById(hId int) *Hero {
 	for _, h := range ConfHeros {
 		if h.Hero_id == hId {
 			return &h

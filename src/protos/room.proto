@@ -17,7 +17,7 @@ message RoomIdentify {
 
 message CreateRoomReq {
     string username = 1;
-    string hero_id = 2;
+    uint32 hero_id = 2;
     bool pve = 3;
 }
 

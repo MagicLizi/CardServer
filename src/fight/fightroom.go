@@ -38,12 +38,12 @@ func (r *Room) ResetPlayerConn(username string, conn *websocket.Conn) {
 }
 
 func (r *Room) ChangeTurn() {
-	luckCardId := "c0"
+	luckCardId := 10000
 	if r.CurTurn == nil {
 		turn := rand.Intn(2)
 		if turn == 0 {
 			r.CurTurn = r.P1
-			r.P2.AddHandCard(fmt.Sprintf("%s_%d_%d", luckCardId, 0, r.P2.PSide), luckCardId)
+			r.P2.AddHandCard(fmt.Sprintf("%d_%d_%d", luckCardId, 0, r.P2.PSide), luckCardId)
 
 		} else {
 			r.CurTurn = r.P2
@@ -76,7 +76,7 @@ func (r *Room) InitCenterLibrary() {
 		cardId := v.Card_id
 		count := v.Card_number
 		for i := 0; i < count; i++ {
-			fCardId := fmt.Sprintf("%s_%d_center", cardId, i)
+			fCardId := fmt.Sprintf("%d_%d_center", cardId, i)
 			r.CenterLibrary[fCardId] = InitFCard(fCardId, cardId)
 			mustCount++
 		}
@@ -88,7 +88,7 @@ func (r *Room) InitCenterLibrary() {
 		cardId := v.Card_id
 		count := v.Card_number
 		for i := 0; i < count; i++ {
-			fCardId := fmt.Sprintf("%s_%d_center", cardId, i)
+			fCardId := fmt.Sprintf("%d_%d_center", cardId, i)
 			randomIds = append(randomIds, InitFCard(fCardId, cardId))
 		}
 	}

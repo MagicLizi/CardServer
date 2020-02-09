@@ -1,7 +1,7 @@
 package config
 
 type CenterCard struct {
-	Card_id     string
+	Card_id     int
 	Card_number int
 	Inevitable  int
 }

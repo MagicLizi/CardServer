@@ -1,9 +1,9 @@
 package config
 
 type Card struct {
-	Card_id       string
+	Card_id       int
 	Card_name     string
-	Card_skin     string
+	Card_skin     int
 	Card_describe string
 	Card_type     int
 	Card_hp       int
@@ -16,9 +16,9 @@ type Card struct {
 
 var ConfCards []Card
 
-var Cards map[string]Card = make(map[string]Card)
+var Cards map[int]Card = make(map[int]Card)
 
-func GetCardById(cardId string) Card {
+func GetCardById(cardId int) Card {
 	return Cards[cardId]
 }
 

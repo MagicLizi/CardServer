@@ -7,7 +7,7 @@ type FCard struct {
 	StaticData config.Card
 }
 
-func InitFCard(fcId string, cardId string) FCard {
+func InitFCard(fcId string, cardId int) FCard {
 	return FCard{
 		Cid:        fcId,
 		StaticData: config.GetCardById(cardId),

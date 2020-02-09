@@ -7,7 +7,7 @@ import (
 
 var curRooms = make(map[int]*Room)
 
-func CreateFightRoom(creator string, heroId string, pve bool, conn *websocket.Conn) (*Room, bool) {
+func CreateFightRoom(creator string, heroId int, pve bool, conn *websocket.Conn) (*Room, bool) {
 
 	room := isInRoom(creator)
 	room = nil // always create
@@ -21,7 +21,7 @@ func CreateFightRoom(creator string, heroId string, pve bool, conn *websocket.Co
 	p1.InitPlayerLibraries(config.P1Cards)
 	newRoom := InitRoom(p1)
 	if pve {
-		comHero := config.GetHeroById("h1") //pve 写死给 h1 暂时
+		comHero := config.GetHeroById(1) //pve 写死给 h1 暂时
 		newRoom.P2 = InitPlayer("comp2", PC, comHero, P2, nil)
 		newRoom.P2.InitPlayerLibraries(config.P2Cards) // pc 暂时写死用2 号卡组
 	}

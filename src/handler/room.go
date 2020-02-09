@@ -12,7 +12,7 @@ func CreateRoom(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
 	var target protos.CreateRoomReq
 	ParseProto(&target, protoBufData)
 
-	room, create := fight.CreateFightRoom(target.Username, target.HeroId, target.Pve, conn)
+	room, create := fight.CreateFightRoom(target.Username, int(target.HeroId), target.Pve, conn)
 
 	if target.Pve {
 		ToProtoRes(&protos.CreateRoomRes{
