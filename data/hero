@@ -1,18 +1,18 @@
 [
     {
-        "hero_id": "h1",
-        "hero_name": "宙斯",
-        "hero_skin": "1",
-        "hero_describe": "天神",
+        "hero_id": 1,
+        "hero_name": "亚丝娜",
+        "hero_skin": 1,
+        "hero_describe": "腹黑萝莉",
         "hero_hp": 80,
-        "hero_card": "c1_2,c2_8"
+        "hero_card": "20008_2,40014_8"
     },
     {
-        "hero_id": "h2",
-        "hero_name": "奥丁",
-        "hero_skin": "2",
-        "hero_describe": "天神",
+        "hero_id": 1,
+        "hero_name": "瑞德",
+        "hero_skin": 2,
+        "hero_describe": "一本正经",
         "hero_hp": 80,
-        "hero_card": "c1_4,c2_6"
+        "hero_card": "20008_4,40014_6"
     }
 ]
