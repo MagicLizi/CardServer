@@ -34,18 +34,26 @@ const (
 	P2 Side = 2
 )
 
+type RenderState int
+
+const (
+	Rendering RenderState = 1
+	RenderEnd RenderState = 2
+)
+
 type Player struct {
-	UserName     string
-	Hero         FHero
-	Conn         *websocket.Conn
-	Type         PlayerType
-	State        PlayerState
-	Library      map[string]FCard //当前牌库
-	DisLibrary   map[string]FCard //当前弃牌堆
-	HandLibrary  map[string]FCard //当前手牌
-	RoundLibrary map[string]FCard //当前回合打出得牌堆
-	BuildLibrary map[string]FCard //当前构筑牌堆
-	PSide        Side
+	UserName              string
+	Hero                  FHero
+	Conn                  *websocket.Conn
+	Type                  PlayerType
+	State                 PlayerState
+	Library               map[string]FCard //当前牌库
+	DisLibrary            map[string]FCard //当前弃牌堆
+	HandLibrary           map[string]FCard //当前手牌
+	RoundLibrary          map[string]FCard //当前回合打出得牌堆
+	BuildLibrary          map[string]FCard //当前构筑牌堆
+	PSide                 Side
+	CenterShopRenderState RenderState
 }
 
 func InitPlayer(username string, t PlayerType, hero *config.Hero, s Side, conn *websocket.Conn) *Player {
@@ -56,15 +64,16 @@ func InitPlayer(username string, t PlayerType, hero *config.Hero, s Side, conn *
 			CurHp:      hero.Hero_hp,
 			StaticData: *hero,
 		},
-		Conn:         conn,
-		Type:         t,
-		State:        Ready,
-		Library:      map[string]FCard{}, //当前待抽取的牌库
-		DisLibrary:   map[string]FCard{}, //废弃牌库
-		HandLibrary:  map[string]FCard{}, //当前手牌
-		RoundLibrary: map[string]FCard{}, //每回合使用过的牌的牌库
-		BuildLibrary: map[string]FCard{}, //带入战斗的构筑牌库
-		PSide:        s,
+		Conn:                  conn,
+		Type:                  t,
+		State:                 Ready,
+		Library:               map[string]FCard{}, //当前待抽取的牌库
+		DisLibrary:            map[string]FCard{}, //废弃牌库
+		HandLibrary:           map[string]FCard{}, //当前手牌
+		RoundLibrary:          map[string]FCard{}, //每回合使用过的牌的牌库
+		BuildLibrary:          map[string]FCard{}, //带入战斗的构筑牌库
+		PSide:                 s,
+		CenterShopRenderState: RenderEnd,
 	}
 	if t == PC {
 		p.State = Fight
@@ -73,7 +82,7 @@ func InitPlayer(username string, t PlayerType, hero *config.Hero, s Side, conn *
 }
 
 func (p *Player) Notify(protoStruct proto.Message, messageKey string) {
-	if p.Conn != nil {
+	if p.Conn != nil && p.Type == Common {
 		b := make([]byte, 2)
 		binary.BigEndian.PutUint16(b, notify.GetNotifyIdWithKey(messageKey))
 		notify.ToProtoNotify(protoStruct, b, p.Conn)
@@ -111,4 +120,67 @@ func (p *Player) InitPlayerLibraries(buildCard []config.PlayerCard) {
 		}
 	}
 	log.Println("InitPlayerLibraries success!")
+}
+
+func (p *Player) LotteryCardsToHand() {
+	//计算当次抽取几张
+	handCardsLimit := 10
+	onceCards := 5
+	leftCards := handCardsLimit - len(p.HandLibrary)
+	needLotteryCount := 0
+	if leftCards >= onceCards {
+		needLotteryCount = onceCards
+	} else {
+		needLotteryCount = leftCards
+	}
+
+	var ids []string
+	//计算是否需要 洗牌
+	if len(p.Library) >= needLotteryCount {
+		ids = p.LotteryFromLibrary(needLotteryCount)
+	} else {
+		for k, v := range p.Library {
+			ids = append(ids, v.Cid)
+			delete(p.Library, k)
+		}
+
+		p.ResetLibrary()
+
+		leftNeed := needLotteryCount - len(ids)
+		leftIds := p.LotteryFromLibrary(leftNeed)
+		ids = append(ids, leftIds...)
+	}
+}
+
+func (p *Player) LotteryFromLibrary(needLotteryCount int) []string {
+	var randomIds []FCard
+	for _, v := range p.Library {
+		randomIds = append(randomIds, v)
+	}
+
+	var ids []string
+	result := LotteryCards(randomIds, needLotteryCount)
+	for _, v := range result {
+		p.HandLibrary[v.Cid] = v
+		delete(p.Library, v.Cid)
+		ids = append(ids, v.Cid)
+	}
+
+	return ids
+}
+
+func (p *Player) ResetLibrary() {
+
+	for k, _ := range p.Library {
+		delete(p.Library, k)
+	}
+
+	for k, v := range p.DisLibrary {
+		p.Library[k] = v
+		delete(p.DisLibrary, k)
+	}
+}
+
+func (p *Player) AddCardToDisLibrary(card FCard) {
+	p.DisLibrary[card.Cid] = card
 }

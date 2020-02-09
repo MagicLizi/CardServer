@@ -2,12 +2,6 @@ syntax = "proto3";
 
 package protos;
 
-message CreateRoomReq {
-    string username = 1;
-    string hero_id = 2;
-    bool pve = 3;
-}
-
 message PlayerInfo {
     string username = 1;
     string hero_name = 2;
@@ -16,20 +10,58 @@ message PlayerInfo {
     uint32 belief = 5;
 }
 
-message CreateRoomRes {
-    uint32 room_id = 1;
-    bool create = 2;
-    PlayerInfo p1 = 3;
-    PlayerInfo p2 = 4;
+message RoomIdentify {
+    string username = 1;
+    uint32 room_id = 2;
 }
 
-message NotifyRefreshCenterShop {
-    repeated string refresh_cards = 1;
+message CreateRoomReq {
+    string username = 1;
+    string hero_id = 2;
+    bool pve = 3;
 }
+
+message CreateRoomRes {
+    uint32 room_id = 1;
+    PlayerInfo p1 = 2;
+    PlayerInfo p2 = 3;
+    bool is_create = 4;
+}
+
+message RoomReadyReq {
+    RoomIdentify room_ide = 1;
+}
+
+message RoomReadyRes {
+    uint32 result = 1;
+}
+
+
+message NotifyRefreshCenterShop {
+    repeated string center_shop_cards = 1;
+}
+
+message RenderCenterShopEnd {
+    RoomIdentify room_ide = 1;
+}
+
+message NotifyLotteryHandCards {
+    repeated string cards = 1;
+    uint32 opp_card_count = 2;
+}
+
+message RenderLotteryHandCardsEnd {
+    RoomIdentify room_ide = 1;
+}
+
+
+
+
 
 message NotifyPlayerRoomInfo {
     repeated string center_shop_cards = 1;
     repeated string player_hand_cards = 2;
+    string cur_turn_user = 3;
 }
 
 message JoinRoomReq {
@@ -39,14 +71,5 @@ message JoinRoomReq {
 }
 
 message JoinRoomRes {
-    uint32 result = 1;
-}
-
-message RoomReadyReq {
-    string username = 1;
-    uint32 room_id = 2;
-}
-
-message RoomReadyRes {
     uint32 result = 1;
 }

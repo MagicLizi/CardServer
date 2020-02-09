@@ -14,6 +14,8 @@ func InitHandlerConf() {
 	handlerMap[2] = CreateRoom
 	handlerMap[3] = JoinRoom
 	handlerMap[4] = RoomReady
+	handlerMap[5] = RenderCenterShopEnd
+	handlerMap[6] = RenderLotteryHandCardsEnd
 }
 
 func GetHandlerByMsgId(msgId uint16) func(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {

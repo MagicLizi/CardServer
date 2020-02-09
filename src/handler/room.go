@@ -31,7 +31,7 @@ func CreateRoom(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
 				Fv:       uint32(room.P2.Hero.CurFV),
 				Belief:   uint32(room.P2.Hero.CurBelief),
 			},
-			Create: create,
+			IsCreate: create,
 		}, msgTypeBuf, conn)
 	} else {
 		if create && &room.P2 == nil {
@@ -44,7 +44,7 @@ func CreateRoom(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
 					Fv:       uint32(room.P1.Hero.CurFV),
 					Belief:   uint32(room.P1.Hero.CurBelief),
 				},
-				Create: create,
+				IsCreate: create,
 			}, msgTypeBuf, conn)
 		} else if !create && &room.P2 != nil {
 			ToProtoRes(&protos.CreateRoomRes{
@@ -63,7 +63,7 @@ func CreateRoom(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
 					Fv:       uint32(room.P2.Hero.CurFV),
 					Belief:   uint32(room.P2.Hero.CurBelief),
 				},
-				Create: create,
+				IsCreate: create,
 			}, msgTypeBuf, conn)
 		}
 	}
@@ -73,9 +73,37 @@ func RoomReady(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
 	log.Println("RoomReady")
 	var target protos.RoomReadyReq
 	ParseProto(&target, protoBufData)
-	ToProtoRes(&protos.RoomReadyRes{
-		Result: fight.PlayerRoomReady(target.Username, int(target.RoomId)),
-	}, msgTypeBuf, conn)
+
+	roomId := int(target.RoomIde.RoomId)
+	username := target.RoomIde.Username
+	room := fight.FindRoom(username, roomId)
+	if room == nil {
+		log.Println("room not exist")
+		return
+	}
+	room.RoomReady(username)
+	//ToProtoRes(&protos.RoomReadyRes{
+	//	Result: room.RoomReady(username),
+	//}, msgTypeBuf, conn)
+}
+
+func RenderCenterShopEnd(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
+	log.Println("render end")
+	var target protos.RenderCenterShopEnd
+	ParseProto(&target, protoBufData)
+
+	roomId := int(target.RoomIde.RoomId)
+	username := target.RoomIde.Username
+	room := fight.FindRoom(username, roomId)
+	if room == nil {
+		log.Println("room not exist")
+		return
+	}
+	room.CenterShopRenderEnd(username)
+}
+
+func RenderLotteryHandCardsEnd(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {
+
 }
 
 func JoinRoom(protoBufData []byte, msgTypeBuf []byte, conn *websocket.Conn) {

@@ -38,9 +38,8 @@ func ws(w http.ResponseWriter, r *http.Request) {
 			log.Println(readErr)
 			return
 		}
-
+		log.Println("receive buffers:", p, messageType)
 		if messageType == websocket.BinaryMessage && len(p) > 2 {
-			log.Println("receive buffers:", p)
 			msgTypeBuf := p[0:2]
 
 			protoData := p[2:len(p)]

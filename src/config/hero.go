@@ -19,7 +19,3 @@ func GetHeroById(hId string) *Hero {
 	}
 	return nil
 }
-
-func ParseHeros() {
-
-}

@@ -4,6 +4,7 @@ import (
 	"../config"
 	"../protos/server"
 	"fmt"
+	"github.com/golang/protobuf/proto"
 	"github.com/gorilla/websocket"
 	"log"
 	"math/rand"
@@ -30,7 +31,7 @@ type Room struct {
 
 func (r *Room) ResetPlayerConn(username string, conn *websocket.Conn) {
 	log.Println("ResetPlayerConn")
-	player := r.GetPlayer(username)
+	player, _ := r.GetPlayer(username)
 	if player != nil {
 		player.Conn = conn
 	}
@@ -92,7 +93,7 @@ func (r *Room) InitCenterLibrary() {
 		}
 	}
 
-	randomFCards := lotteryCards(randomIds, leftNeedCount)
+	randomFCards := LotteryCards(randomIds, leftNeedCount)
 	for _, v := range randomFCards {
 		r.CenterLibrary[v.Cid] = v
 	}
@@ -100,18 +101,16 @@ func (r *Room) InitCenterLibrary() {
 	log.Println("Init CenterLibrary Success")
 }
 
-func (r *Room) GetPlayer(username string) *Player {
+func (r *Room) GetPlayer(username string) (*Player, *Player) {
 	if r.P1.UserName == username {
-		return r.P1
+		return r.P1, r.P2
 	}
-	return r.P2
+	return r.P2, r.P1
 }
 
 func (r *Room) TryStartFight() {
 	if r.P1 != nil && r.P1.State == Fight && r.P2 != nil && r.P2.State == Fight {
 		log.Println("all player is ready begin fight!")
-		r.P1.InitPlayerLibraries(config.P1Cards)
-		r.P2.InitPlayerLibraries(config.P2Cards)
 		r.InitCenterLibrary()
 		r.RefreshCenterShop()
 		r.State = Fighting
@@ -129,7 +128,7 @@ func (r *Room) RefreshCenterShop() {
 		randomIds = append(randomIds, v)
 	}
 
-	result := lotteryCards(randomIds, needLotteryCount)
+	result := LotteryCards(randomIds, needLotteryCount)
 
 	for _, v := range result {
 		refreshCards = append(refreshCards, v.Cid)
@@ -137,13 +136,21 @@ func (r *Room) RefreshCenterShop() {
 		delete(r.CenterLibrary, v.Cid)
 	}
 
-	log.Println("refresh shop end")
 	//通知客户端CenterShop刷新
-
-	r.P1.Notify(&protos.NotifyRefreshCenterShop{
-		RefreshCards: refreshCards,
+	r.P1.CenterShopRenderState = Rendering
+	r.P2.CenterShopRenderState = Rendering
+	r.RoomNotify(&protos.NotifyRefreshCenterShop{
+		CenterShopCards: refreshCards,
 	}, "RefreshCenterShop")
+}
 
+func (r *Room) RoomNotify(protoStruct proto.Message, messageKey string) {
+	if r.P1 != nil && r.P1.Type != PC {
+		r.P1.Notify(protoStruct, messageKey)
+	}
+	if r.P2 != nil && r.P2.Type != PC {
+		r.P2.Notify(protoStruct, messageKey)
+	}
 }
 
 func (r *Room) PlayerReConnect(player *Player) {
@@ -162,7 +169,49 @@ func (r *Room) PlayerReConnect(player *Player) {
 	player.Notify(&protos.NotifyPlayerRoomInfo{
 		CenterShopCards: centerShop,
 		PlayerHandCards: handCards,
+		CurTurnUser:     r.CurTurn.UserName,
 	}, "PlayerRoomInfo")
+}
+
+func (r *Room) RoomReady(username string) uint32 {
+	player, _ := r.GetPlayer(username)
+	if r.State == Waiting {
+		player.State = Fight
+		r.TryStartFight()
+	} else if r.State == Fighting {
+		r.PlayerReConnect(player)
+	}
+	return 1
+}
+
+func (r *Room) CenterShopRenderEnd(username string) {
+	player, oppPlayer := r.GetPlayer(username)
+	if player == nil {
+		log.Println("player not exist")
+		return
+	}
+	player.CenterShopRenderState = RenderEnd
+	if oppPlayer.Type == PC {
+		oppPlayer.CenterShopRenderState = RenderEnd
+	}
+	r.RoundLotteryHandCards()
+}
+
+func (r *Room) RoundLotteryHandCards() {
+	if r.P1.CenterShopRenderState == RenderEnd && r.P2.CenterShopRenderState == RenderEnd {
+		r.P1.LotteryCardsToHand()
+		r.P2.LotteryCardsToHand()
+
+		r.P1.Notify(&protos.NotifyLotteryHandCards{
+			Cards:        CardMapToIds(r.P1.HandLibrary),
+			OppCardCount: uint32(len(r.P2.HandLibrary)),
+		}, "LotteryHandCards")
+
+		r.P2.Notify(&protos.NotifyLotteryHandCards{
+			Cards:        CardMapToIds(r.P2.HandLibrary),
+			OppCardCount: uint32(len(r.P1.HandLibrary)),
+		}, "LotteryHandCards")
+	}
 }
 
 func InitRoom(p *Player) *Room {
@@ -174,15 +223,4 @@ func InitRoom(p *Player) *Room {
 		P1:            p,
 		State:         Waiting,
 	}
-}
-
-func lotteryCards(from []FCard, count int) []FCard {
-	var result []FCard
-	for i := 0; i < count; i++ {
-		lotteryIndex := rand.Intn(len(from))
-		lotteryCard := from[lotteryIndex]
-		from = append(from[:lotteryIndex], from[lotteryIndex+1:]...)
-		result = append(result, lotteryCard)
-	}
-	return result
 }

@@ -9,8 +9,9 @@ import (
 var notifyMap = make(map[string]uint16)
 
 func InitNotifyConf() {
-	notifyMap["RefreshCenterShop"] = 5
-	notifyMap["PlayerRoomInfo"] = 6
+	notifyMap["RefreshCenterShop"] = 101
+	notifyMap["PlayerRoomInfo"] = 102
+	notifyMap["LotteryHandCards"] = 103
 }
 
 func GetNotifyIdWithKey(key string) uint16 {
