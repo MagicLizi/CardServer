@@ -1,15 +1,163 @@
 [
     {
-        "skill_id": "skill1",
-        "skill_name": "放逐",
+        "skill_id": "sk1",
+        "skill_name": "抽洗牌",
         "skill_function": "f1",
-        "skill_describe": "放逐弃牌堆中的1张卡牌",
-        "skill_type": 1,
-        "skill_parameter_a": "discardPile",
-        "skill_parameter_b": "1",
-        "skill_parameter_c": "",
-        "skill_parameter_d": "",
-        "skill_parameter_e": "",
-        "skill_parameter_f": ""
+        "skill_describe": "先抽a张牌再选择b张手牌放入弃牌堆，b值为0时无需选择放入弃牌堆的手牌。",
+        "skill_parameter": "a=2&b=2"
+    },
+    {
+        "skill_id": "sk2",
+        "skill_name": "抽牌加成",
+        "skill_function": "f2",
+        "skill_describe": "每获得1张手牌战力+a， 法力+b，直到当前回合结束。",
+        "skill_parameter": "a=1&b=1"
+    },
+    {
+        "skill_id": "sk3",
+        "skill_name": "乘战法",
+        "skill_function": "f3",
+        "skill_describe": "当前战力乘a倍,当前法力乘b倍",
+        "skill_parameter": "a=2&b=2"
+    },
+    {
+        "skill_id": "sk4",
+        "skill_name": "剧毒",
+        "skill_function": "f4",
+        "skill_describe": "给予敌方英雄a层剧毒debuff，敌方回合开始时，无视护甲的减少剧毒层数的生命值，然后剧毒层数-1，剧毒可被叠加层。",
+        "skill_parameter": "a=2"
+    },
+    {
+        "skill_id": "sk5",
+        "skill_name": "护甲",
+        "skill_function": "f5",
+        "skill_describe": "获得a点护甲，护甲在下回合开时消失。",
+        "skill_parameter": "a=2"
+    },
+    {
+        "skill_id": "sk6",
+        "skill_name": "给牌",
+        "skill_function": "f6",
+        "skill_describe": "将a参数ID的牌，b张放入C(1=我方弃牌堆，2=敌方的弃牌堆）",
+        "skill_parameter": "a=10000&b=2&c=2"
+    },
+    {
+        "skill_id": "sk7",
+        "skill_name": "加战法",
+        "skill_function": "f7",
+        "skill_describe": "己方+a点战力，+b点法力",
+        "skill_parameter": "a=1&b=1"
+    },
+    {
+        "skill_id": "sk8",
+        "skill_name": "恢复",
+        "skill_function": "f8",
+        "skill_describe": "当前生命值+a点，无法超过生命值上限",
+        "skill_parameter": "a=2"
+    },
+    {
+        "skill_id": "sk9",
+        "skill_name": "极速",
+        "skill_function": "f9",
+        "skill_describe": "立即将购买的卡牌放入手牌中，持续到本回合结束",
+        "skill_parameter": ""
+    },
+    {
+        "skill_id": "sk10",
+        "skill_name": "减费",
+        "skill_function": "f10",
+        "skill_describe": "中央牌列中所有卡牌，所需战力-a，所需法力-b",
+        "skill_parameter": "a=1&b=1"
+    },
+    {
+        "skill_id": "sk11",
+        "skill_name": "追击",
+        "skill_function": "f11",
+        "skill_describe": "每次对敌方英雄发动伤害，追加伤害为a的打击",
+        "skill_parameter": "a=1"
+    },
+    {
+        "skill_id": "sk12",
+        "skill_name": "伤害",
+        "skill_function": "f12",
+        "skill_describe": "对敌方英雄造成a点伤害",
+        "skill_parameter": "a=2"
+    },
+    {
+        "skill_id": "sk13",
+        "skill_name": "斩杀",
+        "skill_function": "f13",
+        "skill_describe": "立即购买所选择的1个，战力需求小于等于a点的怪物，或法力需求小于等于b点的随从，技能，装备",
+        "skill_parameter": "a=3&b=3"
+    },
+    {
+        "skill_id": "sk14",
+        "skill_name": "毁灭",
+        "skill_function": "f14",
+        "skill_describe": "选择敌方a件已装配的装备放入敌人的弃牌堆",
+        "skill_parameter": "a=1"
+    },
+    {
+        "skill_id": "sk15",
+        "skill_name": "放逐",
+        "skill_function": "f15",
+        "skill_describe": "选择a区域（1=己方手牌、2=己方弃牌堆、3=敌方装备栏、4=中央排列）的b张牌，移出本局游戏。",
+        "skill_parameter": "a=1&b=1"
+    },
+    {
+        "skill_id": "sk16",
+        "skill_name": "给牌强化",
+        "skill_function": "f16",
+        "skill_describe": "每给对手一张牌，战力+a，法力+b,直到本回合结束",
+        "skill_parameter": "a=1&b=1"
+    },
+    {
+        "skill_id": "sk17",
+        "skill_name": "装备战法",
+        "skill_function": "f17",
+        "skill_describe": "每有一件装备，获得战力+a，法力+b,直到本回合结束",
+        "skill_parameter": "a=1&b=1"
+    },
+    {
+        "skill_id": "sk18",
+        "skill_name": "固有",
+        "skill_function": "f18",
+        "skill_describe": "如果该牌没有被打出，则战力+a,法力+b,被打出后重置",
+        "skill_parameter": "a=1&b=1"
+    },
+    {
+        "skill_id": "sk19",
+        "skill_name": "1增加",
+        "skill_function": "f19",
+        "skill_describe": "如果手牌中的卡牌提供c点战力或c点法力，所提供的战力+a，所提供的法力+b",
+        "skill_parameter": "a=2&b=2&c=1"
+    },
+    {
+        "skill_id": "sk20",
+        "skill_name": "无法打出",
+        "skill_function": "f20",
+        "skill_describe": "无法打出",
+        "skill_parameter": ""
+    },
+    {
+        "skill_id": "sk21",
+        "skill_name": "放逐自身",
+        "skill_function": "f21",
+        "skill_describe": "a=1,打出时放逐自身，=2回合结束时放逐自身",
+        "skill_parameter": "a=1"
+    },
+    {
+        "skill_id": "sk22",
+        "skill_name": "沉默",
+        "skill_function": "f22",
+        "skill_describe": "a值为1，在手牌中时，无法获得战力。B值为1，在手牌中时，无法获得法力",
+        "skill_parameter": "a=1&b=1"
+    },
+    {
+        "skill_id": "sk23",
+        "skill_name": "自伤",
+        "skill_function": "f23",
+        "skill_describe": "回合结束时，如果还在手牌中，则对自身造成a点伤害",
+        "skill_parameter": "a=2"
     }
 ]
