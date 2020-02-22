@@ -6,11 +6,11 @@
         "card_describe": "辛运币",
         "card_type": 4,
         "card_tag": "特殊",
-        "card_costcombat": 0,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 1,
-        "card_skill": "sk1,sk2"
+        "card_tenet": 1,
+        "card_skill": ""
     },
     {
         "card_id": 10001,
@@ -19,11 +19,11 @@
         "card_describe": "放逐1张手牌",
         "card_type": 1,
         "card_tag": "恶魔",
-        "card_costcombat": 4,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": "sk1,sk3"
+        "card_tenet": 0,
+        "card_skill": "sk1"
     },
     {
         "card_id": 10002,
@@ -32,11 +32,11 @@
         "card_describe": "放逐1张中央派牌",
         "card_type": 1,
         "card_tag": "恶魔",
-        "card_costcombat": 3,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 1,
-        "card_skill": "sk1,sk4"
+        "card_tenet": 1,
+        "card_skill": "sk2"
     },
     {
         "card_id": 10003,
@@ -45,11 +45,11 @@
         "card_describe": "抽1张洗1张",
         "card_type": 1,
         "card_tag": "恶魔",
-        "card_costcombat": 2,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 1,
-        "card_mana": 0,
-        "card_skill": "sk1,sk5"
+        "card_tenet": 0,
+        "card_skill": "sk3"
     },
     {
         "card_id": 10004,
@@ -58,11 +58,11 @@
         "card_describe": "抽2张洗2张",
         "card_type": 1,
         "card_tag": "恶魔",
-        "card_costcombat": 3,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 2,
         "card_combat": 0,
-        "card_mana": 2,
-        "card_skill": "sk1,sk6"
+        "card_tenet": 2,
+        "card_skill": "sk4"
     },
     {
         "card_id": 10005,
@@ -71,11 +71,11 @@
         "card_describe": "抽3张洗3张",
         "card_type": 1,
         "card_tag": "恶魔",
-        "card_costcombat": 5,
-        "card_costmana": 0,
+        "card_hp": 1,
+        "card_cost": 2,
         "card_combat": 2,
-        "card_mana": 0,
-        "card_skill": "sk1,sk7"
+        "card_tenet": 0,
+        "card_skill": "sk5"
     },
     {
         "card_id": 10006,
@@ -84,11 +84,11 @@
         "card_describe": "英雄战力X2，放逐自身",
         "card_type": 1,
         "card_tag": "恶魔",
-        "card_costcombat": 8,
-        "card_costmana": 0,
+        "card_hp": 1,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": "sk1"
+        "card_tenet": 0,
+        "card_skill": "sk6"
     },
     {
         "card_id": 10007,
@@ -96,12 +96,12 @@
         "card_skin": 10007,
         "card_describe": "抽1张牌",
         "card_type": 1,
-        "card_tag": "龙",
-        "card_costcombat": 3,
-        "card_costmana": 0,
+        "card_tag": "恶灵",
+        "card_hp": 2,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": "sk2"
+        "card_tenet": 0,
+        "card_skill": "sk7"
     },
     {
         "card_id": 10008,
@@ -110,11 +110,11 @@
         "card_describe": "抽2张牌",
         "card_type": 1,
         "card_tag": "龙",
-        "card_costcombat": 5,
-        "card_costmana": 0,
+        "card_hp": 3,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": "sk3"
+        "card_tenet": 0,
+        "card_skill": "sk8"
     },
     {
         "card_id": 10009,
@@ -123,11 +123,11 @@
         "card_describe": "抽3张牌",
         "card_type": 1,
         "card_tag": "龙",
-        "card_costcombat": 8,
-        "card_costmana": 0,
+        "card_hp": 4,
+        "card_cost": 1,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": "sk4"
+        "card_tenet": 0,
+        "card_skill": "sk9"
     },
     {
         "card_id": 10010,
@@ -136,10 +136,10 @@
         "card_describe": "给予1层剧毒",
         "card_type": 1,
         "card_tag": "蛇",
-        "card_costcombat": 2,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 1,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": "sk10"
     },
     {
@@ -149,10 +149,10 @@
         "card_describe": "给予2层剧毒",
         "card_type": 1,
         "card_tag": "蛇",
-        "card_costcombat": 4,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 2,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": "sk11"
     },
     {
@@ -160,12 +160,12 @@
         "card_name": "10012名称代取",
         "card_skin": 10012,
         "card_describe": "剧毒效果X2，放逐自身",
-        "card_type": 2,
+        "card_type": 1,
         "card_tag": "龙",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 3,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": "sk12"
     },
     {
@@ -174,11 +174,11 @@
         "card_skin": 10013,
         "card_describe": "护甲+1",
         "card_type": 1,
-        "card_tag": "恶魔",
-        "card_costcombat": 2,
-        "card_costmana": 0,
+        "card_tag": "恶灵",
+        "card_hp": 1,
+        "card_cost": 4,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": "sk13"
     },
     {
@@ -188,11 +188,11 @@
         "card_describe": "护甲+2",
         "card_type": 1,
         "card_tag": "龙",
-        "card_costcombat": 4,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk14"
     },
     {
         "card_id": 10015,
@@ -201,11 +201,11 @@
         "card_describe": "护甲+3",
         "card_type": 1,
         "card_tag": "巨人",
-        "card_costcombat": 6,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk15"
     },
     {
         "card_id": 10016,
@@ -214,11 +214,11 @@
         "card_describe": "当前护甲X2，放逐自身",
         "card_type": 1,
         "card_tag": "龙",
-        "card_costcombat": 7,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk16"
     },
     {
         "card_id": 10017,
@@ -227,11 +227,11 @@
         "card_describe": "给对手牌库放入40030",
         "card_type": 1,
         "card_tag": "亡灵",
-        "card_costcombat": 2,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk17"
     },
     {
         "card_id": 10018,
@@ -240,11 +240,11 @@
         "card_describe": "给对手牌库放入40031",
         "card_type": 1,
         "card_tag": "亡灵",
-        "card_costcombat": 3,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk18"
     },
     {
         "card_id": 10019,
@@ -253,11 +253,11 @@
         "card_describe": "给对手牌库放入40032",
         "card_type": 1,
         "card_tag": "亡灵",
-        "card_costcombat": 4,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk19"
     },
     {
         "card_id": 10020,
@@ -266,11 +266,11 @@
         "card_describe": "给对手牌库放入40033",
         "card_type": 1,
         "card_tag": "亡灵",
-        "card_costcombat": 5,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk20"
     },
     {
         "card_id": 10021,
@@ -279,11 +279,11 @@
         "card_describe": "给对手牌库放入40034",
         "card_type": 1,
         "card_tag": "亡灵",
-        "card_costcombat": 6,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk21"
     },
     {
         "card_id": 10022,
@@ -292,49 +292,49 @@
         "card_describe": "给对手牌库放入40035",
         "card_type": 1,
         "card_tag": "亡灵",
-        "card_costcombat": 6,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk22"
     },
     {
         "card_id": 10023,
         "card_name": "10023名称代取",
         "card_skin": 10023,
-        "card_describe": "法力+1",
+        "card_describe": "信仰+1",
         "card_type": 1,
         "card_tag": "小怪",
-        "card_costcombat": 2,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 1,
-        "card_skill": ""
+        "card_tenet": 0,
+        "card_skill": "sk23"
     },
     {
         "card_id": 10024,
         "card_name": "10024名称代取",
         "card_skin": 10024,
-        "card_describe": "法力+2",
+        "card_describe": "信仰+2",
         "card_type": 1,
         "card_tag": "小怪",
-        "card_costcombat": 5,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 2,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 10025,
         "card_name": "10025名称代取",
         "card_skin": 10025,
-        "card_describe": "法力+3",
+        "card_describe": "信仰+3",
         "card_type": 1,
         "card_tag": "小怪",
-        "card_costcombat": 8,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 3,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -344,10 +344,10 @@
         "card_describe": "抽1张牌",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 4,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -357,10 +357,10 @@
         "card_describe": "抽2张牌",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -370,10 +370,10 @@
         "card_describe": "放逐1张手牌",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -383,10 +383,10 @@
         "card_describe": "放逐1张中央派牌",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 4,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -396,10 +396,10 @@
         "card_describe": "护甲+1",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 3,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -409,10 +409,10 @@
         "card_describe": "护甲+2",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -422,10 +422,10 @@
         "card_describe": "护甲+3",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -435,10 +435,10 @@
         "card_describe": "战力+1",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 2,
-        "card_combat": 1,
-        "card_mana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
+        "card_combat": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -448,10 +448,10 @@
         "card_describe": "战力+2",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 5,
-        "card_combat": 2,
-        "card_mana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
+        "card_combat": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -461,10 +461,10 @@
         "card_describe": "战力+3",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 8,
-        "card_combat": 3,
-        "card_mana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
+        "card_combat": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -474,10 +474,10 @@
         "card_describe": "抽1张洗1张",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 2,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -487,10 +487,10 @@
         "card_describe": "给予护甲值相同的打击",
         "card_type": 2,
         "card_tag": "随从",
-        "card_costcombat": 0,
-        "card_costmana": 9,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -500,10 +500,10 @@
         "card_describe": "抽1张牌",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -513,10 +513,10 @@
         "card_describe": "护甲不再重置",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -526,10 +526,10 @@
         "card_describe": "护甲+1",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 4,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -539,10 +539,10 @@
         "card_describe": "护甲+2",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 6,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -552,10 +552,10 @@
         "card_describe": "恢复1",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 3,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -565,10 +565,10 @@
         "card_describe": "恢复2",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -578,10 +578,10 @@
         "card_describe": "恢复3",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -591,23 +591,23 @@
         "card_describe": "立即获得购买的卡牌",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 30009,
         "card_name": "30009名称代取",
         "card_skin": 30009,
-        "card_describe": "购买法力消耗-1",
+        "card_describe": "购买信仰消耗-1",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 4,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -617,36 +617,36 @@
         "card_describe": "每回合结束给予敌方剧毒+1",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 30011,
         "card_name": "30011名称代取",
         "card_skin": 30011,
-        "card_describe": "法力+1",
+        "card_describe": "信仰+1",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 4,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 1,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 30012,
         "card_name": "30012名称代取",
         "card_skin": 30012,
-        "card_describe": "法力+2",
+        "card_describe": "信仰+2",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 2,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -656,10 +656,10 @@
         "card_describe": "战力+1",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 3,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 1,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -669,10 +669,10 @@
         "card_describe": "战力+2",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 6,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 2,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -682,10 +682,10 @@
         "card_describe": "抽1张洗1张",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 3,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -695,10 +695,10 @@
         "card_describe": "放逐的手牌被视为打出",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -708,10 +708,10 @@
         "card_describe": "每次攻击额外发起1点打击",
         "card_type": 4,
         "card_tag": "装备",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -721,10 +721,10 @@
         "card_describe": "恢复1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 2,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -734,10 +734,10 @@
         "card_describe": "恢复2",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 4,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -747,10 +747,10 @@
         "card_describe": "恢复3",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 6,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -760,10 +760,10 @@
         "card_describe": "本回合立即获得购买的卡牌",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 4,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -773,10 +773,10 @@
         "card_describe": "给予1层剧毒",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 3,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -786,10 +786,10 @@
         "card_describe": "护甲+1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 3,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -799,10 +799,10 @@
         "card_describe": "护甲+2",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -812,10 +812,10 @@
         "card_describe": "造成1点伤害",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 2,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -825,10 +825,10 @@
         "card_describe": "造成2点伤害",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -838,10 +838,10 @@
         "card_describe": "造成3点伤害",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -851,10 +851,10 @@
         "card_describe": "全范围打击1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 4,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -864,10 +864,10 @@
         "card_describe": "全范围打击2",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -877,49 +877,49 @@
         "card_describe": "全范围打击3",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 9,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 40014,
         "card_name": "40014名称代取",
         "card_skin": 40014,
-        "card_describe": "法力+1",
+        "card_describe": "信仰+1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 3,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 1,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 40015,
         "card_name": "40015名称代取",
         "card_skin": 40015,
-        "card_describe": "法力+2",
+        "card_describe": "信仰+2",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 6,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 2,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 40016,
         "card_name": "40016名称代取",
         "card_skin": 40016,
-        "card_describe": "法力+3",
+        "card_describe": "信仰+3",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 9,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 3,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -929,10 +929,10 @@
         "card_describe": "斩杀3",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -942,10 +942,10 @@
         "card_describe": "斩杀4",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -955,10 +955,10 @@
         "card_describe": "放逐一张装备，放逐自身",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 3,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -968,10 +968,10 @@
         "card_describe": "敌方1装备放入弃牌堆",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -981,23 +981,23 @@
         "card_describe": "对手每有一张诅咒，获得1战力",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 40022,
         "card_name": "40022名称代取",
         "card_skin": 40022,
-        "card_describe": "对手每有一张诅咒，获得1法力",
+        "card_describe": "对手每有一张诅咒，获得1信仰",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1007,23 +1007,23 @@
         "card_describe": "获得装备数量相同的战力",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 40024,
         "card_name": "40024名称代取",
         "card_skin": 40024,
-        "card_describe": "获得装备数量相同的法力",
+        "card_describe": "获得装备数量相同的信仰",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1033,10 +1033,10 @@
         "card_describe": "普通打击造成伤害，剧毒+1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1046,23 +1046,23 @@
         "card_describe": "每获得手牌战力+1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 40027,
         "card_name": "40027名称代取",
         "card_skin": 40027,
-        "card_describe": "每洗牌法力+1",
+        "card_describe": "每洗牌信仰+1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 7,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1072,23 +1072,23 @@
         "card_describe": "如果该牌没有被打出，该牌战力+1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 5,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 40029,
         "card_name": "40029名称代取",
         "card_skin": 40029,
-        "card_describe": "使所有伤害为1，战力为1，法力为1的的卡牌+1",
+        "card_describe": "使所有伤害为1，战力为1，信仰为1的的卡牌+1",
         "card_type": 4,
         "card_tag": "技能",
-        "card_costcombat": 0,
-        "card_costmana": 8,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1098,10 +1098,10 @@
         "card_describe": "无法打出，放逐自身",
         "card_type": 4,
         "card_tag": "诅咒",
-        "card_costcombat": 0,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1111,10 +1111,10 @@
         "card_describe": "无法打出，造成2点伤害，放逐自身",
         "card_type": 4,
         "card_tag": "诅咒",
-        "card_costcombat": 0,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1124,10 +1124,10 @@
         "card_describe": "无法打出",
         "card_type": 4,
         "card_tag": "诅咒",
-        "card_costcombat": 0,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1137,23 +1137,23 @@
         "card_describe": "造成X点伤害，无法打出",
         "card_type": 4,
         "card_tag": "诅咒",
-        "card_costcombat": 0,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
         "card_id": 40034,
         "card_name": "10021名称代取",
         "card_skin": 10021,
-        "card_describe": "无法获得法力，放逐自身",
+        "card_describe": "无法获得信仰，放逐自身",
         "card_type": 4,
         "card_tag": "诅咒",
-        "card_costcombat": 0,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1163,10 +1163,10 @@
         "card_describe": "无法获得战力，放逐自身",
         "card_type": 4,
         "card_tag": "诅咒",
-        "card_costcombat": 0,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     },
     {
@@ -1176,10 +1176,10 @@
         "card_describe": "惩戒",
         "card_type": 4,
         "card_tag": "特殊",
-        "card_costcombat": 0,
-        "card_costmana": 0,
+        "card_hp": 0,
+        "card_cost": 0,
         "card_combat": 0,
-        "card_mana": 0,
+        "card_tenet": 0,
         "card_skill": ""
     }
 ]
